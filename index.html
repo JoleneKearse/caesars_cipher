@@ -6,35 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script>
+        $().ready(function() {
+            setInterval(function() {
+                $('#background').text(`00101_`)
+            }, 100)
+            
+        });
+    </script> -->
     <title>En/Decode This</title>
 </head>
 <body>
-    <h1><span class="deco">En</span>/<span class="deco">De</span>code This!</h1>
-    <main>
-        <div class="container">
-            <!-- <div class="info">
-                <p class="question">Want to keep messages from prying eyes?</p>
-                <p class="directions">Enter you message below, click <em>encode</em> and copy to safely send it out.</p>
-                <p class="question">Have a message you can't understand?</p>
-                <p class="directions">Enter it below, click <em>decode</em> to have it decrypted.</p>
-            </div> -->
-            <div class="controls flex">
-                <form class="message flex">
-                    <label for="text" id="messageInfo">Enter your message:</label> 
-                    <textarea name="text" id="textInput" cols="30" rows="10"></textarea>
-                    <label for="key" class="d-block">Enter the key:</label>
-                    <input type="number" name="key" id="key">
-                </form>
-                <div class="btns-box">
-                    <button id="encodeBtn">Encode</button>
-                    <button id="decodeBtn">Decode</button>
+    <div class="background" id="background">
+        <h1><span class="deco">En</span>/<span class="deco">De</span>code This!</h1>
+        <main>
+            <div class="container">
+                </div>
+                <!-- <div class="info">
+                    <p class="question">Want to keep messages from prying eyes?</p>
+                    <p class="directions">Enter you message below, click <em>encode</em> and copy to safely send it out.</p>
+                    <p class="question">Have a message you can't understand?</p>
+                    <p class="directions">Enter it below, click <em>decode</em> to have it decrypted.</p>
+                </div> -->
+                <div class="controls flex">
+                    <form class="message flex" id="myForm">
+                        <label for="text" id="messageInfo">Enter your message:</label>
+                        <textarea name="text" id="textInput" cols="30" rows="3"></textarea>
+                        
+                        <label for="key" class="d-block">Enter the key:</label>
+                        <input type="number" name="key" id="key" min="1" max="26">
+                    </form>
+                    <div class="btns-box">
+                        <button id="encodeBtn">Encode</button>
+                        <button id="decodeBtn">Decode</button>
+                    </div>
+                    <div class="result">
+                        <p id="resultText"></p>
+                    </div>
+                    <button id="resetBtn">Reset</button>
                 </div>
             </div>
-            <div class="result">
-                <p id="resultText"></p>
-            </div>
-        </div>
-    </main>
+        </main>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

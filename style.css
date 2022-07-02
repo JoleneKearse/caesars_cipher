@@ -1,6 +1,4 @@
-
 /* ---------- CUSTOM PROPERTIES ----------*/
-
 
 :root {
     --clr-white: #DFF8D5;
@@ -15,7 +13,6 @@
     --gap-5: 3em;
 }
 /* ---------- RESET ----------*/
-
 
 *,
 *:before,
@@ -48,7 +45,9 @@ body {
     line-height: 1.2;
     color: var(--clr-accent-green);
     background-color: var(--clr-black);
+    background-image: url('green-background.jpg');
 }
+
 /* ---------- TYPOGRAPHY ----------*/
 h1 {
     font-size: clamp(2.5rem, 1.3750rem + 5.0000vw, 4.5rem);
@@ -82,13 +81,13 @@ em,
     color: #B6CDAC;
 }
 
-
-
 /* ---------- LAYOUT ----------*/
 .container {
     width: 800px;
     max-width: 90vw;
     margin-inline: auto;
+    margin-bottom: var(--gap-3);
+    padding: 0 1.5em;
 }
 
 .info {
@@ -107,6 +106,7 @@ em,
     margin-inline: auto;
     padding: var(--gap-3) var(--gap-2);
     border: .1rem dashed var(--clr-input);
+    background-color: #010101;
 }
 
 label {
@@ -114,7 +114,8 @@ label {
 }
 
 textarea,
-input {
+input,
+.result {
     margin-inline: auto;
     padding: var(--gap-2);
     background-color: var(--clr-white);
@@ -122,12 +123,18 @@ input {
     border: none;
     font: inherit;
     font-weight: 700;
-    color: var(--clr-accent-blue);
+    color: var(--clr-black);
 }
 
-textarea {
+textarea,
+.result {
+    width: 450px;
+    max-width: 60vw;
+    height: 15vh;
+    margin-inline: auto;
     border-radius: var(--gap-2);
 }
+
 
 textarea:hover,
 textarea:focus,
@@ -141,19 +148,33 @@ button:focus {
 input {
     width: 2.5em;
     aspect-ratio: 1;
+    padding: .2em;
+    padding-left: .75em;
     border-radius: 50%;
 }
 
 button {
     padding: .5em 2.3em;
+    font-weight: 700;
     border: none;
     border-radius: 1em;
 }
 
+.result {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-white);
+    font-weight: 700;
+    color: var(--clr-black);
+}
 
+#resetBtn {
+    width: 250px;
+    max-width: 40vw;
+    margin-inline: auto;
+}
 
 /* ---------- COMPONENTS ----------*/
-
 
 
 
